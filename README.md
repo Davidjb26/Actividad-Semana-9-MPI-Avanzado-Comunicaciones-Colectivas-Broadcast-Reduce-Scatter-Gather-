@@ -18,9 +18,14 @@ El objetivo principal de esta práctica es comprender, implementar y analizar el
 ## 🛠️ Requisitos e Instalación en Google Colab
 Dado que Google Colab no incluye por defecto un runtime de computación paralela, se deben seguir los siguientes pasos distribuidos en celdas:
 
-### 1. Celda de Aprovisionamiento (Instalación de Dependencias)
+### 1. Instalación de Dependencias
 ```python
 !apt-get update
 !apt-get install -y openmpi-bin libopenmpi-dev
 !pip install mpi4py
+```
+
+### 2. Execucion del script 
+```
+!mpiexec --allow-run-as-root --oversubscribe -np 4 python calculo_mpi.py
 ```
